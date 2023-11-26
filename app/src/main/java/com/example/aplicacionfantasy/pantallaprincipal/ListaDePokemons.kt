@@ -35,7 +35,7 @@ fun ListaDePokemons (pokemon: Pokemon) {
             modifier = Modifier
                 .size(40.dp)
                 .padding(8.dp))
-        Text(text = pokemon.nombrePokemon)
+        Text(text = pokemon.tipoPrincipal)
         Icon(imageVector = Icons.Default.Star, contentDescription = null)
     }
 

@@ -90,17 +90,17 @@ fun PantallaPrincipal(navController: NavHostController, nombrePokemon: Bundle?) 
                 ) { Icon(
                         imageVector = Icons.Default.Search,
                         contentDescription = null,
-                        modifier = Modifier.padding(3.dp)) } },
+                        modifier = Modifier.padding(3.dp))}},
                         modifier = Modifier.fillMaxWidth())
         {
-            val pokemonesFiltrados = pokemones.filter { it.nombrePokemon.contains(query, ignoreCase = true) }
+            val pokemonesFiltrados = pokemones.filter { it.tipoPrincipal.contains(query, ignoreCase = true) }
             LazyColumn(modifier = Modifier
                 .fillMaxWidth()
                 .weight(1f)) {
                 items(pokemonesFiltrados) { pokemon -> ListaDePokemons(pokemon) }
             }
         }
-        val pokemonesFiltrados = pokemones.filter { it.nombrePokemon.contains(query, ignoreCase = true) }
+        val pokemonesFiltrados = pokemones.filter { it.tipoPrincipal.contains(query, ignoreCase = true) }
         LazyColumn(modifier = Modifier
             .fillMaxWidth()
             .weight(1f))

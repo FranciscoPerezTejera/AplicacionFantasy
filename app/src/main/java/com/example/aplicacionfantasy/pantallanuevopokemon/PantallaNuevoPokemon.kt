@@ -101,7 +101,6 @@ fun PantallaNuevoPokemon(navController: NavHostController) {
                                 listaPokemons.find { it.nombrePokemon == nombre }?.fotoPokemon
                             descripcion =
                                 listaPokemons.find { it.nombrePokemon == nombre }?.descripcion.toString()
-
                             expandirNombre = false
                         }
                     )
@@ -166,10 +165,6 @@ fun PantallaNuevoPokemon(navController: NavHostController) {
             onValueChange = { nuevoValor ->
                 sliderValueSPEED = nuevoValor
             })
-
-        Button(onClick = { navController.navigate(Rutas.PantallaPrincipal.ruta) }) {
-            Text(text = "AÑADIR")
-        }
     }
 
     val pokemon = Pokemon(
@@ -181,7 +176,7 @@ fun PantallaNuevoPokemon(navController: NavHostController) {
         sliderValueDEF.toInt().toString(),
         sliderValueSPEED.toInt().toString(),
         painterSeleccionado,
-        descripcion
+        descripcion,
     )
     val bundle = Bundle()
     bundle.putParcelable("pokemon",pokemon)

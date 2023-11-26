@@ -4,6 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
+import androidx.compose.ui.graphics.Color;
 import androidx.compose.ui.graphics.painter.Painter;
 
 
@@ -125,6 +126,7 @@ public class Pokemon implements Parcelable {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
 
     @Override
     public int describeContents() {
