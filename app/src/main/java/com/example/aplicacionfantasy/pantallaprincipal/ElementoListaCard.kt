@@ -37,6 +37,7 @@ import com.example.aplicacionfantasy.ruta.Rutas
 fun ElementoListaCard(pokemon: Pokemon, navController: NavController) {
     
     Row {
+
         Card (
             modifier = Modifier
             .padding(8.dp)

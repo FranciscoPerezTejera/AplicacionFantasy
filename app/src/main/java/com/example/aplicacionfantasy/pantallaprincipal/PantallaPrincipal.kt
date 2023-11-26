@@ -94,6 +94,7 @@ fun PantallaPrincipal(navController: NavHostController, nombrePokemon: Bundle?) 
                         modifier = Modifier.fillMaxWidth())
         {
             val pokemonesFiltrados = pokemones.filter { it.tipoPrincipal.contains(query, ignoreCase = true) }
+
             LazyColumn(modifier = Modifier
                 .fillMaxWidth()
                 .weight(1f)) {
